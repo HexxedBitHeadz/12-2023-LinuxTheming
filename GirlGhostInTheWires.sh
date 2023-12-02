@@ -248,8 +248,8 @@ EOF
 chmod +x ~/.config/polybar/launch.sh
 
 # Customizing dunstrc notifications:
-sed -i '/\[urgency_low\]/,/timeout = 10/ { s/background = "#222222"/background = "#1f0620"/; s/foreground = "#888888"/foreground = "#000000"/; s/# IMPORTANT: colors have to be defined in quotation marks./# IMPORTANT: colors have to be defined in quotation marks./; s/timeout = 10/timeout = 10/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; s/\[urgency_low\]/\[urgency_low\]\n    frame_color = "#000000"/; }
-/\[urgency_normal\]/,/timeout = 10/ { s/background = "#285577"/background = "#000000"/; s/foreground = "#ffffff"/foreground = "#421677"/; s/timeout = 10/timeout = 10/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; s/\[urgency_normal\]/\[urgency_normal\]\n    frame_color = "#ca0fd3"/; }
-/\[urgency_critical\]/,/timeout = 0/ { s/background = "#900000"/background = "#f6fdfe"/; s/foreground = "#ffffff"/foreground = "#000000"/; s/frame_color = "#ff0000"/frame_color = "#ca0fd3"/; s/timeout = 0/timeout = 0/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; }' ~/.config/dunst/dunstrc
+sed -i '/\[urgency_low\]/,/timeout = 10/ { s/background = "#222222"/background = "#000000"/; s/foreground = "#888888"/foreground = "#ca0fd3"/; s/# IMPORTANT: colors have to be defined in quotation marks./# IMPORTANT: colors have to be defined in quotation marks./; s/timeout = 10/timeout = 10/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; s/\[urgency_low\]/\[urgency_low\]\n    frame_color = "#ca0fd3"/; }
+/\[urgency_normal\]/,/timeout = 10/ { s/background = "#285577"/background = "#ca0fd3"/; s/foreground = "#ffffff"/foreground = "#000000"/; s/timeout = 10/timeout = 10/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; s/\[urgency_normal\]/\[urgency_normal\]\n    frame_color = "#000000"/; }
+/\[urgency_critical\]/,/timeout = 0/ { s/background = "#900000"/background = "#f6fdfe"/; s/foreground = "#ffffff"/foreground = "#ca0fd3"/; s/frame_color = "#ff0000"/frame_color = "#ca0fd3"/; s/timeout = 0/timeout = 0/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; }' ~/.config/dunst/dunstrc
 
 sudo reboot
