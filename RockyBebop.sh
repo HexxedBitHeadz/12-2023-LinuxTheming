@@ -194,8 +194,8 @@ cat << 'EOL' >> ~/.config/polybar/config.ini
 [bar/Bottom]
 bottom=true
 width = 100%
-height = 18pt
-radius = 6
+height = 24pt
+radius = 0
 ; dpi = 9
 background = ${colors.background}
 foreground = ${colors.foreground}
