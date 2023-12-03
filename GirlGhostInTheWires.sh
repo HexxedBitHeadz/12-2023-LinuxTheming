@@ -159,10 +159,10 @@ EOL
 # Customizing picom settings:
 sed -i '/# opacity-rule = \[\]/c\opacity-rule = ["80:class_g = '\''Terminator'\'' && focused", "80:class_g = '\''Terminator'\'' && !focused"];' ~/.config/picom/picom.conf
 
-sed -i 's/shadow-radius = 7;/shadow-radius = 5;/g' ~/.config/picom/picom.conf
+sed -i 's/shadow-radius = 7;/shadow-radius = 10;/g' ~/.config/picom/picom.conf
 sed -i 's/shadow-offset-x = -7;/shadow-offset-x = -5;/g' ~/.config/picom/picom.conf
-sed -i 's/shadow-offset-y = -7;/shadow-offset-y = -5;/g' ~/.config/picom/picom.conf
-sed -i 's/# shadow-opacity = .75/shadow-opacity = 0.8;/g' ~/.config/picom/picom.conf
+sed -i 's/shadow-offset-y = -7;/shadow-offset-y = 15;/g' ~/.config/picom/picom.conf
+sed -i 's/# shadow-opacity = .75/shadow-opacity = 0.5;/g' ~/.config/picom/picom.conf
 sed -i 's/fade-in-step = 0.03;/fade-in-step = 0.07;/g' ~/.config/picom/picom.conf
 sed -i 's/fade-out-step = 0.03;/fade-out-step = 0.07;/g' ~/.config/picom/picom.conf
 
