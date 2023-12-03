@@ -191,6 +191,41 @@ sed -i 's/font-0 = monospace;2/font-0 = GoMono Nerd Font:style=Bold/' ~/.config/
 sed -i 's/modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date/modules-right = pulseaudio memory cpu wlan eth powermenu/g' ~/.config/polybar/config.ini
 
 cat << 'EOL' >> ~/.config/polybar/config.ini
+[bar/Bottom]
+bottom=true
+width = 100%
+height = 18pt
+radius = 6
+; dpi = 9
+background = ${colors.background}
+foreground = ${colors.foreground}
+padding-left = 1
+padding-right = 1
+module-margin = 1
+font-0 = GoMono Nerd Font:style=Bold
+modules-left = bspwm
+modules-right = date
+cursor-click = pointer
+cursor-scroll = ns-resize
+enable-ipc = true
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+; override-redirect = true
+
+[module/bspwm]
+type = internal/bspwm
+; Customize the module as needed
+format = <label-state> <label-mode>
+; Customize the colors for the active and inactive workspaces
+foreground-occupied = #ffffff
+foreground-free = #888888
+background-occupied = #333333
+background-free = #222222
+; Customize the colors for the active workspace
+foreground-focused = #00ff00
+background-focused = #1e1e1e
+
 [module/powermenu]  
 type = custom/menu  
 expand-right = true  
@@ -242,9 +277,6 @@ sed -i 's/%{F#F0C674}%ifname%%{F-} %local_ip%/%{F#ffffff}%ifname%%{F-} %local_ip
 # Replace the date format:
 sed -i 's/date = %H:%M/date=%Y-%m-%d %H:%M:%S/g' ~/.config/polybar/config.ini
 
-#sed -i '/module-right = pulseaudio memory cpu wlan eth/a [bar/Bottom]' ~/.config/polybar/config.ini
-#sed -i '/\[bar\/Bottom\]/a bottom=true' ~/.config/polybar/config.ini
-
 # Modifying launch.sh to include polybar when booting:
 cat << EOF > ~/.config/polybar/launch.sh
 #!/usr/bin/env bash
@@ -256,10 +288,10 @@ polybar Top 2>&1 | tee -a /tmp/polybar1.log & disown
 echo "Top Bar launched..."
 
 # Launch Bottom bar
-### echo "---" | tee -a /tmp/polybar1.log
-### polybar Bottom 2>&1 | tee -a /tmp/polybar1.log & disown
+echo "---" | tee -a /tmp/polybar1.log
+polybar Bottom 2>&1 | tee -a /tmp/polybar1.log & disown
 
-### echo "Bottom Bar launched..."
+echo "Bottom Bar launched..."
 EOF
 
 chmod +x ~/.config/polybar/launch.sh
