@@ -217,8 +217,8 @@ type = internal/bspwm
 ; Customize the module as needed
 format = <label-state> <label-mode>
 ; Customize the colors for the active and inactive workspaces
-label-focused-foreground=${colors.primary}
-label-focused-background=${colors.background}
+label-focused-foreground=${colors.foreground}
+label-focused-background=${colors.primary}
 
 [module/powermenu]  
 type = custom/menu  
