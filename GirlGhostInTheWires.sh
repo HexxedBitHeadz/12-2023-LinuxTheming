@@ -86,6 +86,10 @@ ctrl + alt + {Left,Down,Up,Right}
   , d1=right;  d2=left;   dx=$n;  dy=0;   \
   } \
   bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+
+# set the window state
+ctrl + alt + {t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 EOL
 
 # Get wallpapers
