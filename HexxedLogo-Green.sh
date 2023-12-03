@@ -18,7 +18,7 @@ chmod +x ~/.config/bspwm/bspwmrc
 echo "exec bspwm" > ~/.xinitrc
 
 # Setting up sxhkdrc:
-cat << EOL > ~/.config/sxhkd/sxhkdrc
+cat << 'EOL' > ~/.config/sxhkd/sxhkdrc
 
 # terminal emulator
 ctrl + 1
