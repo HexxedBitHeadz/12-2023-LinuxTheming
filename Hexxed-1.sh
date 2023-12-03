@@ -185,7 +185,7 @@ sed -i 's/border-size = 4pt/border-size = 2pt/' ~/.config/polybar/config.ini
 sed -i 's/border-color = #00000000/border-color = #e9bf81/' ~/.config/polybar/config.ini
 sed -i 's/padding-left = 0/padding-left = 1/g' ~/.config/polybar/config.ini
 sed -i 's/padding-right = 2/padding-right = 1/g' ~/.config/polybar/config.ini
-sed -i 's/modules-left = xworkspaces xwindow/modules-left = bspwm xwindow/g' ~/.config/polybar/config.ini
+sed -i 's/modules-left = xworkspaces xwindow/modules-left = xwindow/g' ~/.config/polybar/config.ini
 sed -i 's/font-0 = monospace;2/font-0 = GoMono Nerd Font:style=Bold/' ~/.config/polybar/config.ini
 sed -i 's/modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date/modules-right = pulseaudio memory cpu wlan eth powermenu/g' ~/.config/polybar/config.ini
 
