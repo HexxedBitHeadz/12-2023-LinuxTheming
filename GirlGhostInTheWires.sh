@@ -278,9 +278,6 @@ sed -i 's/%{F#F0C674}%ifname%%{F-} %local_ip%/%{F#7115b5}%ifname%%{F-} %local_ip
 # Replace the date format:
 sed -i 's/date = %H:%M/date=%Y-%m-%d %H:%M:%S/g' ~/.config/polybar/config.ini
 
-#sed -i '/module-right = pulseaudio memory cpu wlan eth/a [bar/Bottom]' ~/.config/polybar/config.ini
-#sed -i '/\[bar\/Bottom\]/a bottom=true' ~/.config/polybar/config.ini
-
 # Modifying launch.sh to include polybar when booting:
 cat << EOF > ~/.config/polybar/launch.sh
 #!/usr/bin/env bash
