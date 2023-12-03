@@ -38,10 +38,6 @@ ctrl + 9
 ctrl + 0
 	bspc desktop -l next
 
-# program launcher
-ctrl + @space
-	dmenu_run
-
 # close and kill
 ctrl + {_,shift + } q
 	bspc node -{c,k}
