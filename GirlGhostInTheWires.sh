@@ -53,21 +53,39 @@ ctrl + {_,shift + } l
 ctrl + alt + r
 	pkill -USR1 -x sxhkd && notify-send "sxhkd reloaded!"
 
-# focus the node in the given direction
-ctrl + {h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+# Cycle node focus
+alt + c
+    bspc node -f {next.local,prev.local}
 
-# expand a window by moving one of its side outward
-ctrl + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# Change focus to biggest node
+alt + v
+	bspc node -f biggest.local
 
-# contract a window by moving one of its side inward
-ctrl + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+# Change focus to smallest node
+alt + x
+	bspc node -f smallest.local
 
-# set the window state
-ctrl + alt + {t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# # Promote to master
+alt + space
+	bspc node -s biggest.local
+
+# Equalize size of all windows
+alt + z
+	bspc node @/ --equalize
+
+# Rotate windows clockwise and anticlockwise
+ctrl + r
+    bspc node @/ --circulate {backward,forward}
+
+# expand and contract window node
+ctrl + alt + {Left,Down,Up,Right}
+  n=10; \
+  { d1=left;   d2=right;  dx=-$n; dy=0;   \
+  , d1=bottom; d2=top;    dx=0;   dy=$n;  \
+  , d1=top;    d2=bottom; dx=0;   dy=-$n; \
+  , d1=right;  d2=left;   dx=$n;  dy=0;   \
+  } \
+  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
 EOL
 
 # Get wallpapers
