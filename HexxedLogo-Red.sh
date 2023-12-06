@@ -177,6 +177,7 @@ sed -i 's/background-alt = #373B41/background-alt = #000000/g' ~/.config/polybar
 sed -i 's/foreground = #C5C8C6/foreground = #E41C38/g' ~/.config/polybar/config.ini
 sed -i 's/primary = #F0C674/primary = #909090/g' ~/.config/polybar/config.ini
 sed -i 's/secondary = #8ABEB7/secondary = #000000/g' ~/.config/polybar/config.ini
+sed -i '/disabled =/a cancelButton = #384441' ~/.config/polybar/config.ini
 sed -i 's/\[bar\/example\]/[bar\/Top]/g' ~/.config/polybar/config.ini
 sed -i '/^\[bar\/Top\]$/a bottom=false' ~/.config/polybar/config.ini
 sed -i 's/height = 24pt/height = 32pt/' ~/.config/polybar/config.ini
@@ -225,42 +226,42 @@ type = custom/menu
 expand-right = true  
 format-spacing = 1  
 label-open = "xxx"  
-label-open-foreground = ${colors.urgent}  
+label-open-foreground = ${colors.primary}  
 label-close = xxx cancel  
-label-close-foreground = ${colors.success}  
+label-close-foreground = ${colors.foreground}  
 label-separator = |  
 label-separator-foreground = ${colors.foreground}  
 ;Powermenu  
 menu-0-0 = "Reboot"  
 menu-0-0-exec = menu-open-1  
-menu-0-0-foreground = ${colors.urgent}  
+menu-0-0-foreground = ${colors.foreground}  
 menu-0-1 = "Power Off"  
 menu-0-1-exec = menu-open-2  
-menu-0-1-foreground = ${colors.urgent}  
+menu-0-1-foreground = ${colors.foreground}  
 menu-0-2 = "Hibernate"  
 menu-0-2-exec = menu-open-3  
-menu-0-2-foreground = ${colors.warning}  
+menu-0-2-foreground = ${colors.foreground}  
 ;Reboot  
 menu-1-0 = "Reboot"  
-menu-1-0-exec = menu-open-0  
-menu-1-0-foreground = ${colors.success}  
+menu-1-0-exec = systemctl reboot  
+menu-1-0-foreground = ${colors.primary}  
 menu-1-1 = "Cancel"  
-menu-1-1-exec = systemctl reboot  
-menu-1-1-foreground = ${colors.urgent}  
+menu-1-1-exec = menu-open-0  
+menu-1-1-foreground = ${colors.cancelButton}  
 ;Shutdown  
 menu-2-0 = "Power off"  
 menu-2-0-exec = systemctl poweroff  
-menu-2-0-foreground = ${colors.urgent}  
+menu-2-0-foreground = ${colors.primary}  
 menu-2-1 = "Cancel"  
 menu-2-1-exec = menu-open-0  
-menu-2-1-foreground = ${colors.success}  
+menu-2-1-foreground = ${colors.cancelButton}  
 ;Hibernate  
 menu-3-0 = "Hibernate"  
 menu-3-0-exec = systemctl hibernate  
-menu-3-0-foreground = ${colors.urgent}  
+menu-3-0-foreground = ${colors.primary}  
 menu-3-1 = "Cancel"  
 menu-3-1-exec = menu-open-0  
-menu-3-1-foreground = ${colors.success}
+menu-3-1-foreground = ${colors.cancelButton}
 EOL
 
 # Replace the eth0 color:
