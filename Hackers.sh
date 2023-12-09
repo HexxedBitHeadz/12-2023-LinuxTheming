@@ -298,4 +298,5 @@ sed -i '/\[urgency_low\]/,/timeout = 10/ { s/background = "#222222"/background =
 /\[urgency_critical\]/,/timeout = 0/ { s/background = "#900000"/background = "#ffffff"/; s/foreground = "#ffffff"/foreground = "#a60026"/; s/frame_color = "#ff0000"/frame_color = "#a60026"/; s/timeout = 0/timeout = 0/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; }' ~/.config/dunst/dunstrc
 
 sudo apt install kali-linux-headless -y
+
 sudo reboot
