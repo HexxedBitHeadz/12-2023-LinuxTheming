@@ -296,4 +296,6 @@ sed -i '/\[urgency_low\]/,/timeout = 10/ { s/background = "#222222"/background =
 /\[urgency_normal\]/,/timeout = 10/ { s/background = "#285577"/background = "#C18641"/; s/foreground = "#ffffff"/foreground = "#000000"/; s/timeout = 10/timeout = 10/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; s/\[urgency_normal\]/\[urgency_normal\]\n    frame_color = "#909090"/; }
 /\[urgency_critical\]/,/timeout = 0/ { s/background = "#900000"/background = "#E41C38"/; s/foreground = "#ffffff"/foreground = "#000000"/; s/frame_color = "#ff0000"/frame_color = "#384441"/; s/timeout = 0/timeout = 0/; s/#default_icon = \/path\/to\/icon/#default_icon = \/path\/to\/icon/; }' ~/.config/dunst/dunstrc
 
+sudo apt install kali-linux-headless -y
+
 sudo reboot
