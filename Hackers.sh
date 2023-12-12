@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Installing required software:
-sudo apt install bspwm dunst firefox-esr i3lock imagemagick libnotify-bin mousepad neofetch nitrogen nnn picom polybar rofi sxhkd terminator xinit xorg unzip -y
+sudo apt install bspwm dunst firefox-esr i3lock libnotify-bin mousepad neofetch nitrogen nnn picom polybar rofi sxhkd terminator xinit xorg unzip -y
 
 # Making directories for .config setup:
 cd ~/.config/ && mkdir -p bspwm sxhkd polybar rofi picom dunst wallpaper
