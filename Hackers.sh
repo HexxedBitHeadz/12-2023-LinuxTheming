@@ -89,7 +89,7 @@ ctrl + alt + {t,s,f}
 EOL
 
 # Get wallpapers
-wget -O ~/.config/wallpaper/wallpaper.jpg https://hexxedbitheadz.com/wp-content/uploads/2024/03/wallpaper.jpg && wget -O ~/.config/wallpaper/lockscreen.png https://hexxedbitheadz.com/wp-content/uploads/2024/03/lockscreen.png
+wget -O ~/.config/wallpaper/wallpaper.jpg https://hexxedbitheadz.com/wp-content/uploads/2024/03/wallpaper-HACKERS.jpg && wget -O ~/.config/wallpaper/lockscreen.png https://hexxedbitheadz.com/wp-content/uploads/2024/03/lockscreen-HACKERS.png
 # Setting up tools to auto-start:
 cat << EOL >> ~/.config/bspwm/bspwmrc
 picom --config ~/.config/picom/picom.conf --daemon &
