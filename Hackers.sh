@@ -89,8 +89,7 @@ ctrl + alt + {t,s,f}
 EOL
 
 # Get wallpapers
-wget -O ~/.config/wallpaper/wallpaper.jpg https://www.hexxedbitheadz.com/wp-content/uploads/go-x/u/46d3244f-2ba8-45e0-a5fa-bf147842b69c/image.jpg && wget -O ~/.config/wallpaper/lockscreen.png https://www.hexxedbitheadz.com/wp-content/uploads/go-x/u/0ebb2209-a15e-4217-beba-ff540d0dc9ea/image.png
-
+wget -O ~/.config/wallpaper/wallpaper.jpg https://hexxedbitheadz.com/wp-content/uploads/2024/03/wallpaper.jpg && wget -O ~/.config/wallpaper/lockscreen.png https://hexxedbitheadz.com/wp-content/uploads/2024/03/lockscreen.png
 # Setting up tools to auto-start:
 cat << EOL >> ~/.config/bspwm/bspwmrc
 picom --config ~/.config/picom/picom.conf --daemon &
